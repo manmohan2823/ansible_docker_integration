@@ -4,6 +4,11 @@
   tasks:
   - name: Creating Docker repository
     yum_repository:
+      name: Docker
+      description: Docker 
+      baseurl: https://download.docker.com/linux/centos/7/x86_64/stable
+      gpgcheck: no
+      
   - name: Installing Docker
     package:
       name:
